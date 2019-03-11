@@ -15,21 +15,31 @@ export class AppComponent {
   albums = [];
   posts = [];
 
+  defecto=5;
+
+  
   constructor(private dataservice: DataService) {
-
-    this.dataservice.getData().subscribe(data => {
-      console.log("imagenes", data.length);
-      this.albums = data;
+ 
+   this.dataservice.getData().subscribe(data => {
+    this.albums = data.filter(data => data.id < 21);
+    console.log("imagenes",  this.albums.length);
     })
+    
     this.dataservice.getDato().subscribe(data => {
-
-      this.posts = data.filter(data => data.id > 14);
+     
+      this.posts = data.filter(data => data.id < this.defecto);
       console.log("post", this.posts.length);
     })
 
   }
-  filtrado() {
-    console.log("filtrado");
-  }
 
+  albumFinder(ev:number) {
+   ev++;
+    this.dataservice.getDato().subscribe(data => {
+      this.posts = data.filter(data => data.id < ev);
+      console.log("post", this.posts.length);
+    })
+  
+  
+  }
 }
