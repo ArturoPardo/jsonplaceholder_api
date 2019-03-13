@@ -11,13 +11,13 @@ import {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pruebas';
-  alumnos = ['mariela', 'poppy'];
+
   albums = [];
   posts = [];
   defecto='';
   colores=[];
   clase:string="true";
+username: string = '';
 
   
   constructor(private dataservice: DataService) {
@@ -65,14 +65,14 @@ export class AppComponent {
   
   }
 
-  albumFinder(ev:string) {
+  albumFinder() {
   //  ev++;
   //   this.dataservice.getDato().subscribe(data => {
   //     this.posts = data.filter(data => data.id < ev);
    
   //     console.log("post", this.posts.length);
   //   })
-var query = ev;
+var query = this.username;
     this.dataservice.getDato().subscribe(data => {
       this.posts = data.filter(data => data.body.match(query));
 

@@ -1,10 +1,5 @@
 <h1>JsonPlaceHolder Api</h1>
-<!-- <ul>
-  <li *ngFor="let user of alumnos">
-    <app-alumnos [dato]="user"></app-alumnos>
-  </li>
-</ul> -->
-<!-- <div *ngFor="let p of posts"><img src={{p.url}} width="100" height="100"></div>  -->
+
 
 <div class="container">
   <div *ngFor="let p of albums"><img src={{p.url}} width="50" height="50"></div>
@@ -14,7 +9,7 @@
 </div>
 <div class="finder">
   <div class="form-creation">
-    <input type="text" placeholder="busqueda de albums" [(ngModel)]="username" (keyup)="albumFinder(username)" />
+    <input type="text" placeholder="busqueda de albums" [(ngModel)]="username" (keyup)="albumFinder()" />
     <button (click)="borrar()">Limpiar filtro</button>
   </div>
 </div>
