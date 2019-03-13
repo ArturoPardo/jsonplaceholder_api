@@ -3,20 +3,29 @@
   <li *ngFor="let user of alumnos">
     <app-alumnos [dato]="user"></app-alumnos>
   </li>
-
 </ul> -->
 <!-- <div *ngFor="let p of posts"><img src={{p.url}} width="100" height="100"></div>  -->
+
 <div class="container">
-<div *ngFor="let p of albums"><img src={{p.url}} width="100" height="100"></div> 
+  <div *ngFor="let p of albums"><img src={{p.url}} width="50" height="50"></div>
 </div>
-<div class="form-creation"> 
-  <input type="text" placeholder="busqueda de albums" [(ngModel)]="username"/>
-  <button (click)="albumFinder(username)" >Busqueda</button>
- 
+<div class="container">
+  <div class="n_random" *ngFor="let p of colores">{{p}}</div>
 </div>
-<ol>
-<li *ngFor="let p of posts">{{p.body}} </li> 
-</ol>
+<div class="finder">
+  <div class="form-creation">
+    <input type="text" placeholder="busqueda de albums" [(ngModel)]="username" (keyup)="albumFinder(username)" />
+    <button (click)="borrar()">Limpiar filtro</button>
+  </div>
+</div>
+
+
+<div class="lista" *ngFor="let p of posts">
+  <span>{{p.id}}</span>
+  {{p.title}}
+
+</div>
+
 
 
 <router-outlet></router-outlet>
