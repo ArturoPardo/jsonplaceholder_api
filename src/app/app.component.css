@@ -63,3 +63,8 @@ span {
   background-color: yellow;
   margin-right: 3px;
 }
+.center{
+    background-color: yellow;
+    text-align: center;
+    font-size: 0.8em;
+}

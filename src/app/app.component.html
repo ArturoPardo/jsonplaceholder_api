@@ -1,12 +1,17 @@
 <h1>JsonPlaceHolder Api</h1>
 
+<div class="container">
+    <div *ngFor="let p of mio">
+      <img src={{p.url}} width="50" height="50">
+      <div class="center">{{p.id}}</div>
+    </div>
+  </div>
 
-<div class="container">
-  <div *ngFor="let p of albums"><img src={{p.url}} width="50" height="50"></div>
-</div>
-<div class="container">
-  <div class="n_random" *ngFor="let p of colores">{{p}}</div>
-</div>
+
+   
+   
+
+
 <div class="finder">
   <div class="form-creation">
     <input type="text" placeholder="busqueda de albums" [(ngModel)]="username" (keyup)="albumFinder()" />
