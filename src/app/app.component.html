@@ -1,20 +1,16 @@
 <h1>JsonPlaceHolder Api</h1>
 
 <div class="container">
-    <div *ngFor="let p of mio">
-      <img src={{p.url}} width="50" height="50">
-      <div class="center">{{p.id}}</div>
-    </div>
+  <div *ngFor="let p of mio">
+    <img src={{p.url}} width="50" height="50">
+    <div class="center">{{p.id}}</div>
   </div>
-
-
-   
-   
+</div>
 
 
 <div class="finder">
   <div class="form-creation">
-    <input type="text" placeholder="busqueda de albums" [(ngModel)]="username" (keyup)="albumFinder()" />
+    <input type="text" placeholder=" ..Posts Finder" [(ngModel)]="username" (keyup)="albumFinder()" />
     <button (click)="borrar()">Limpiar filtro</button>
   </div>
 </div>
@@ -25,7 +21,5 @@
   {{p.title}}
 
 </div>
-
-
 
 <router-outlet></router-outlet>

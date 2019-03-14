@@ -2,10 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
   margin-bottom: 10px;
 }
-
 .form-creation {
   margin-left: auto;
   margin-right: auto;
@@ -21,29 +19,23 @@
 .false {
   background-color: yellow;
 }
-
 .true {
   background-color: blue;
 }
-
 h1 {
   border-bottom: 1px solid #000;
 }
-
 .n_random {
   background-color: yellow;
   width: 50px;
   float: left;
   text-align: center;
-
 }
 
 .finder {
   border-top: 1px solid #000;
-
   padding: 10px 0px;
 }
-
 ul {
   list-style: none;
 }
@@ -54,17 +46,20 @@ ul {
   margin-bottom: 5px;
 }
 
-.input {
-  background-color: red;
-  display: block;
+input {
+ border:none;
 }
 
 span {
   background-color: yellow;
   margin-right: 3px;
 }
-.center{
-    background-color: yellow;
-    text-align: center;
-    font-size: 0.8em;
+
+.center {
+  background-color: yellow;
+  text-align: center;
+  font-size: 0.8em;
+}
+input:focus{
+	outline:0px;
 }
