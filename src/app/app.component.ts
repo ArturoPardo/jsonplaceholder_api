@@ -23,17 +23,14 @@ export class AppComponent {
  posts = [];
  defecto = '';
 
-
-
   albums = [];
-  clase: string = "true";
   username: string = '';
  
-  muestra = [];
-  variable: boolean = true;
+  
 
   constructor(private dataservice: DataService) {
-    
+   
+
    while (this.ejemplo_resultado.length < 4) {
       var aleatorio = Math.round(Math.random() * (this.ultimo - this.primero) + this.primero);
      // --------------aleatorio es un numero entre 1 y 7
@@ -70,23 +67,19 @@ export class AppComponent {
         this.mio.push(indice);
       }
     })
-
+  
 
  // --------------POSTS
     this.dataservice.getDato().subscribe(data => {
+ 
  // -------------lo buscamos dentro del array de albums y lo metemos en el nuevo
       this.posts = data.filter(data => data.body.match(this.defecto));
        // -------------post es un array de un filtro que coincide con "" =Todos
-
-      for (let i = 0; i < this.posts.length; i++) {
-        if (i % 2 != 0) {
-          // console.log("impar", i);
-        } else {
-          // console.log("par", i);
-        }
-      }
+     
     })
+
   }
+  
 
   albumFinder() {
      // query es el ngmodel enviado

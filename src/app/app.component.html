@@ -15,11 +15,11 @@
   </div>
 </div>
 
+<table>
+  <tr *ngFor="let  p of posts">
+  <td><span>{{p.id}}</span>{{p.title}}</td>
+   </tr>
+  </table>
 
-<div class="lista" *ngFor="let p of posts">
-  <span>{{p.id}}</span>
-  {{p.title}}
-
-</div>
 
 <router-outlet></router-outlet>

@@ -16,10 +16,10 @@
   border-radius: 5px;
 }
 
-.false {
+.div{
   background-color: yellow;
 }
-.true {
+.impar{
   background-color: blue;
 }
 h1 {
@@ -40,10 +40,11 @@ ul {
   list-style: none;
 }
 
-.lista {
-  background-color: #eaeaea;
+table {
+ 
   font-size: 0.8em;
-  margin-bottom: 5px;
+  width: 100%!important;
+  
 }
 
 input {
@@ -52,7 +53,7 @@ input {
 
 span {
   background-color: yellow;
-  margin-right: 3px;
+  margin-right: 10px;
 }
 
 .center {
@@ -60,6 +61,13 @@ span {
   text-align: center;
   font-size: 0.8em;
 }
-input:focus{
+input:focus, button:focus{
 	outline:0px;
+}
+
+tr:nth-child(odd) {
+  background-color:#eaeaea;
+}
+tr:nth-child(even) {
+  background-color:#fbfbfb;
 }
