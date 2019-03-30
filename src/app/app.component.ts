@@ -26,11 +26,9 @@ export class AppComponent {
   albums = [];
   username: string = '';
  
-  
-
   constructor(private dataservice: DataService) {
-   
-
+ 
+  // --------------!!ojo!!ejemplo es el array que muestra en consola y que excluye un numero
    while (this.ejemplo_resultado.length < 4) {
       var aleatorio = Math.round(Math.random() * (this.ultimo - this.primero) + this.primero);
      // --------------aleatorio es un numero entre 1 y 7
@@ -67,25 +65,29 @@ export class AppComponent {
         this.mio.push(indice);
       }
     })
-  
 
  // --------------POSTS
     this.dataservice.getDato().subscribe(data => {
- 
+    
  // -------------lo buscamos dentro del array de albums y lo metemos en el nuevo
       this.posts = data.filter(data => data.body.match(this.defecto));
        // -------------post es un array de un filtro que coincide con "" =Todos
-     
+     // -------------accedemos al objeto id del array
+       this.posts.map(listObj => {
+        for (let i = 0; i < 10; i++) {if (i === listObj.id){listObj.id="0"+listObj.id}}
+       });
+     // -------------accedemos al objeto id del array
     })
-
   }
   
-
   albumFinder() {
      // query es el ngmodel enviado
        var query = this.username;
        this.dataservice.getDato().subscribe(data => {
        this.posts = data.filter(data => data.title.match(query));
+       this.posts.map(listObj => {
+        for (let i = 0; i < 10; i++) {if (i === listObj.id){listObj.id="0"+listObj.id}}
+       });
       }
     )
   }

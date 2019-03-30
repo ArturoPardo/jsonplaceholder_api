@@ -12,7 +12,6 @@ export class DataService {
   getData(){
     return this.httpclient.get<Albums[]>('https://jsonplaceholder.typicode.com/photos')
   }
-  
 
   getDato(){
     return this.httpclient.get<Posts[]>('https://jsonplaceholder.typicode.com/posts')

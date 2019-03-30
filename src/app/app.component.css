@@ -15,13 +15,6 @@
   padding: 5px;
   border-radius: 5px;
 }
-
-.div{
-  background-color: yellow;
-}
-.impar{
-  background-color: blue;
-}
 h1 {
   border-bottom: 1px solid #000;
 }
@@ -41,10 +34,8 @@ ul {
 }
 
 table {
- 
   font-size: 0.8em;
   width: 100%!important;
-  
 }
 
 input {
